@@ -1,0 +1,524 @@
+/*
+Theme Name: Portfolio
+Theme URI: 
+Author: mickael
+Author URI: http://wordpress.org/
+Description: un theme from search
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: magic-of-design
+*/
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary {
+    display: block;
+}
+
+audio,canvas,video {
+    display: inline-block;  
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden] {
+    display: none;
+}
+
+html {
+    font-size: 100%; 
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%; 
+}
+
+html,button,input,select,textarea {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:active,a:hover {
+    outline: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+p,pre {
+    margin: 1em 0;
+}
+
+code,kbd,pre,samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+q {
+    quotes: none;
+}
+
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+dl,menu,ol,ul {
+    margin: 1em 0;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+menu,ol,ul {
+    padding: 0 0 0 40px;
+}
+
+nav ul,nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+img {
+    border: 0; 
+    -ms-interpolation-mode: bicubic; 
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+}
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal; 
+}
+
+button,input,select,textarea {
+    font-size: 100%; 
+    margin: 0; 
+    vertical-align: baseline; 
+}
+
+button,input {
+    line-height: normal;
+}
+
+button,html input[type="button"], input[type="reset"],input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;  
+}
+
+button[disabled],input[disabled] {
+    cursor: default;
+}
+
+input[type="checkbox"],input[type="radio"] {
+    box-sizing: border-box; 
+    padding: 0;  
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield; 
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; 
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto; 
+    vertical-align: top; 
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/********************/
+/*     Fin reset    */
+/********************/
+
+
+body{
+    width: 800px;
+    font: normal 15px Helvetica, Arial, Sans-Serif;
+    margin: 0 auto;
+    line-height: 1.4;
+    background: gainsboro;    
+    overflow: scroll;
+    background: url('img/bg1.jpg') repeat;
+    background-attachment:fixed;
+}
+
+/* menu */ 
+
+nav{
+    background: black;
+    margin-top: -1em;
+}
+
+nav li{
+    display: inline-block;
+    margin-right: 1em;
+    padding: 0.5em;
+}
+
+nav li:first-child{
+    margin-left: 7em;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+    padding: 0.5em;
+}
+
+nav a:hover {
+    color: black;
+    background: white;
+}
+
+/* Slider */ 
+
+#slider {
+    width:40em;
+    height:20em;
+    position:relative;
+    margin:0 auto;
+    box-shadow: 0px 1px 5px #999999;
+}
+#slider img {
+    position:absolute;
+    border:none;
+    display:none;
+}
+
+#slider 
+{
+    transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+}
+
+#slider a.imgLink {
+    z-index:2;
+    display:none;
+    position:absolute;
+    top:0px;
+    left:0px;
+    border:0;
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+}
+
+/* travaux  */ 
+
+#tvx{
+    margin-left: 5em;
+    margin-top: 1.5em;
+}
+
+#tvx a{
+    margin-right: 1em; 
+}
+
+#tvx a img {        
+    border: 2px solid white;
+}
+
+/* .info */ 
+
+.info h1, .info h2{
+    margin-bottom: -0.3em;
+}
+
+.info p, .info article{ 
+    width: 43em;
+    margin-left: 5em;
+    line-height: 1.5;
+}
+
+.info article p{
+    width: 38em;
+}
+
+.info footer{
+    text-align: center;
+}
+
+.info footer h4{
+    display: inline;
+}
+
+.info footer p {
+    display: inline;
+    margin-left: 1em;
+}
+
+.info:last-child{
+    margin-bottom: 2em;
+}
+
+#gallery{
+    width: 46.7em;
+    margin-left: 3em;
+}
+
+.portfolio {
+    width: 150px;
+    padding: 25px;
+    margin:  1em;
+    display: inline-block;
+    background: rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px black;
+    color: white;
+}
+
+.vigniette img{
+    border: 2px white solid;
+}
+
+.portfolio .post a{
+    float:right;
+    color: white;
+    font-size: 1.2em;
+}
+
+.portfolio h2 {
+    margin-bottom: 0;
+}
+
+.portfolio .post a:hover{
+    color: black;
+    font-size: 1.2em;
+}
+
+form{
+    margin-left: 10em;
+    padding-bottom: 2em;
+    margin-top: 1em;
+}
+
+label{
+    display: inline-block;
+    font-weight: bold;
+    margin-right:0.6em;
+    text-align: right;
+    width: 7.5em;
+    line-height: 2.5;
+    float: left;
+}
+
+input, textarea{
+    padding: 0.5em;
+    margin: 0.5em;
+    border: 1px solid #b9bdc1;
+    width: 20em;
+}
+
+#submit{
+    margin-left: 9.2em;
+}
+
+#submit:hover{
+    border: 1px black solid;
+}
+
+.single .post{
+    font-size: 1.1em;
+}
+
+#propos{
+    margin-top: 2em;
+}
+
+#propos p{
+    font-size: 1.2em;
+}
+
+#propos h2{
+    padding-bottom: 0.5em;
+}
+
+table {
+    font-size: 1.1em;
+    line-height: 2;   
+    background: rgba(0,0,0,0.3);
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    color: white;
+}
+
+td{
+    padding-right: 0.55em;
+    display: inline-block;
+}
+
+tr{
+    display: inline-block;
+    width: 22em;
+    text-align: right;
+}
+
+.lv1,.lv2,.lv3,.lv4,.lv5{
+    width: 205px;
+    text-indent: -9999px;
+    text-align: left;
+    display: inline-block;
+    margin: 0.8em 1em 0.8em 0;
+}
+.lv1{
+    background: url("img/niveau.png") 0 0;
+}
+
+.lv2{
+    background: url("img/niveau.png") 0 -35px;
+}
+
+
+.lv3{
+    background: url("img/niveau.png") 0 -70px;
+}
+
+.lv4{
+    background: url("img/niveau.png") 0 -105px;
+}
+
+.lv5{
+    background: url("img/niveau.png") 0 -140px;
+}
+
+.blog:first-child h2{
+    margin-top: 2em;
+}
+
+.blog p{
+    width: 51em;
+    margin-left: 2em;
+    margin-bottom: 1.5em;
+}
+
+.blog footer p{
+    display: inline;
+    margin: 0;
+    padding-right: 1em;
+}
+
+.blog footer p:first-child{
+    padding-left: 15em;
+}
+
+p.comment-notes{
+    display: none;
+}
