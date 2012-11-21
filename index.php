@@ -24,7 +24,7 @@ get_header();
             ?>
         </div>
         <div id="tvxHasard">
-            <a href="<?php the_permalink(); ?>"><img src="http://lorempixel.com/617/300" alt="" title="" /></a>
+            <a href="<?php the_permalink(); ?>"><img src="http://placehold.it/617x309" alt="" title="" /></a>
         </div>
     </div>
     <div id="travaux">

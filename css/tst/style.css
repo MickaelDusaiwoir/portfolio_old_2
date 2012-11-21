@@ -18,8 +18,8 @@ body{
     font: normal 15px Helvetica, Arial, Sans-Serif;
     line-height: 1.4;
     overflow: scroll;
-    background-color: rgb(250,250,250);
     margin: 0;
+    background: url(../../img/tst/bg-headliner.gif) repeat top center;
 }
 
 #header{
@@ -71,13 +71,16 @@ body{
     text-shadow: 1px 1px 0 #f2fcd9;
 }
 
+#header .current-menu-item a {
+    color: black;
+}
+
 .content {
-    background: url(../../img/tst/bg-headliner.gif) repeat top center;
     height: auto;
     width: 100%;
 }
 
-#moi {
+#moi, #single {
     margin: 0 auto;
     overflow: hidden;
     padding: 3em 0;
@@ -85,7 +88,7 @@ body{
     width: 950px;
 }
 
-#presentation {
+#presentation, #infoSingle {
     background: none;
     float: left;
     margin-left: 0;
@@ -95,7 +98,7 @@ body{
 
 }
 
-#presentation h1, #dernierPost h2, #travaux h2, #gallery h2 {
+#presentation h1, #dernierPost h2, #travaux h2, #gallery h2, #post h2, #single h1 {
     color: #634a0a;
     font-family: 'CarterOneRegular';
     font-size: 2em;
@@ -105,7 +108,7 @@ body{
     text-shadow: 1px 1px 0 #fff0d8;
 }
 
-#presentation p {
+#presentation p, #infoSingle p {
     line-height: 1.4;
     margin: 0;
     padding: 15px 0 0;
@@ -113,7 +116,7 @@ body{
     text-shadow: 1px 1px 0 #f4dcb6;
 }
 
-#tvxHasard img, #travaux img, #gallery img {
+#tvxHasard img, #travaux img, #gallery img, #image img {
     border: 3px solid #fff;
 }
 
@@ -121,7 +124,7 @@ body{
     opacity: 0.6;
 }
 
-#travaux h3, #dernierPost h3 a, #gallery h3 {
+#travaux h3, #dernierPost h3 a, #gallery h3, #post h3 a, #single h2{
     color: #634a0a;
     font-family: 'AndikaRegular';
     font-size: 1.5em;
@@ -139,7 +142,7 @@ body{
 }
 
 
-#travaux ul, #dernierPost ul, #gallery ul {
+#travaux ul, #dernierPost ul, #gallery ul, #post ul {
     color: #525252;
     list-style: none;
     margin: 0 auto;
@@ -148,7 +151,7 @@ body{
     width: 960px;
 }
 
-#travaux li, #dernierPost li, #gallery li {
+#travaux li, #dernierPost li, #gallery li, #post li {
     float: left;
     padding-right: 1.2em;
     width: 300px;
@@ -158,22 +161,22 @@ body{
     padding-right: 0;
 }
 
-#travaux h2, #dernierPost h2, #gallery h2 {
+#travaux h2, #dernierPost h2, #gallery h2, #post h2 {
     width: 960px;
     margin: 0 auto;
     padding-bottom: 1em;
 }
 
-#travaux li h3, #dernierPost h3, #gallery h3 {
+#travaux li h3, #dernierPost h3, #gallery h3, #post h3 {
     margin-top: 0.5em;
     width: 300px;
 }
 
-#travaux ul:after, #dernierPost ul:after, #gallery ul:after {
+#travaux ul:after, #dernierPost ul:after, #gallery ul:after, #post ul:after {
     clear: both;
 }
 
-#dernierPost h2 {
+#dernierPost h2, #post h2 {
     margin-top: 1em;
     padding-bottom: 0.5em;
 }
@@ -192,5 +195,20 @@ body{
 
 #gallery {
     padding: 2em 0;
-    height: 547px;
+}
+
+#post a:hover {
+    color: black;
+}
+
+#single article, #single section{
+    margin-left: 1em;
+}
+
+#single section {
+    margin-top: 2em;
+}
+
+#commentform .comment-notes {
+    display: none;
 }

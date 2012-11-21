@@ -41,7 +41,7 @@ if (!function_exists('portfolio_setup')) {
 
             add_image_size('ipad', 540, 380, FALSE);
             add_image_size('iphone', 270, 190, FALSE);
-            add_image_size('hasard', 617, 300, FALSE);
+            add_image_size('hasard', 617, 309, FALSE);
 
             /* if(preg_match('/lg|iphone|blackberry|opera|ipad|android|Mobile|psp|SCH-I800/i', $_SERVER['HTTP_USER_AGENT'])) {  
               add_image_size('folio-work',540,380,FALSE);
@@ -79,7 +79,7 @@ if (!function_exists('create_post_type')) {
         register_post_type('Blog', array('labels' => array(
                 'name' => __('Blog'),
                 'singular_name' => __('Blog')),
-            'supports' => array('title', 'editor', 'thumbnail', 'post-formats', 'comments'),
+            'supports' => array('title', 'editor', 'thumbnail', 'post-formats', 'comments', 'excerpt'),
             'public' => TRUE,
             'has_archive' => true
         ));
@@ -109,6 +109,7 @@ if (!function_exists('juiz_manage_default_fields')) {
                 <label for="email">Email</label>
                 <input id="email" name="email" value="' . $commenter['comment_author_email'] . '" placeholder="Votre email" aria-required="true" size="30" type="text" />
           </p>';
+        $default['fields']['url'] = '';
         return $default;
     }
 
