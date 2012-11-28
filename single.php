@@ -9,13 +9,7 @@ get_header();
             while (have_posts()):
                 the_post();
                 ?>
-                <article>
-                    <div id="infoSingle">
-                        <h1><?php the_title(); ?></h1>
-                        <?php the_excerpt(); ?>
-                        <?php the_content(); ?>
-                        <p><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>
-                    </div>
+                <article>                    
 
                     <div id="image">                    
                         <?php
@@ -28,6 +22,14 @@ get_header();
                         }
                         ?>
                     </div>
+                    
+                    <div id="infoSingle">
+                        <h1><?php the_title(); ?></h1>
+                        <?php the_excerpt(); ?>
+                        <?php the_content(); ?>
+                        <p><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>
+                    </div>
+                    
                 </article>
                 <section>
                     <?php comments_template(); ?>
