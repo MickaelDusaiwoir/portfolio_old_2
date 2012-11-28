@@ -41,7 +41,7 @@ if (!function_exists('portfolio_setup')) {
 
             add_image_size('ipad', 540, 380, FALSE);
             add_image_size('iphone', 270, 190, FALSE);
-            add_image_size('hasard', 617, 309, FALSE);
+            add_image_size('hasard', 627, 314, FALSE);
 
             /* if(preg_match('/lg|iphone|blackberry|opera|ipad|android|Mobile|psp|SCH-I800/i', $_SERVER['HTTP_USER_AGENT'])) {  
               add_image_size('folio-work',540,380,FALSE);

@@ -188,7 +188,7 @@ get_header();
                         Message
                     </label>
 
-                    <textarea id="msg" rows="4" cols="53" placeholder="Que souhaitez vous me dire !!" name="msg"><?php
+                    <textarea id="msg" rows="4" cols="58" placeholder="Que souhaitez vous me dire !!" name="msg"><?php
                     if (isset($msg)) {
                         echo ($msg);
                     }
