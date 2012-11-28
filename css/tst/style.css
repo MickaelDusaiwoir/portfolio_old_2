@@ -19,60 +19,7 @@ body{
     line-height: 1.4;
     overflow: scroll;
     margin: 0;
-    background: url(../../img/tst/bg-headliner.gif) repeat top center;
-}
-
-#header{
-    background: url(../../img/tst/bg-header.gif) repeat-x top center;
-    margin: 0 auto;
-    overflow: hidden;
-    font-size: 1.4em;
-}
-
-#header nav{
-    display: block;
-    width: 960px;
-    margin: 0 auto;  
-    padding: 1em 0 ;
-}
-
-#header ul {
-    width: 520px;
-    background: url(../../img/tst/menu.png) no-repeat left top;
-    margin: 0 0 0 20em;
-    padding: 0;
-}
-
-#header li, #header a {
-    display: inline-block;
-    padding: 0 0.5em 0 0.5em;    
-}
-
-#header ul li{
-    vertical-align: top;
-    height: 49px;
-    background: url(../../img/tst/separator-navigation.gif) no-repeat center right;
-}
-
-#header li:last-child {
-    height: 63px;
-    background: none;
-}
-
-#header li a {
-    text-decoration: none;
-    color: #70551a; 
-    padding-top: 0.4em;
-    height: 43px;
-}
-
-#header a:hover {
-    color: black;
-    text-shadow: 1px 1px 0 #f2fcd9;
-}
-
-#header .current-menu-item a {
-    color: black;
+   background: url(../../img/tst/bg-headliner.gif) repeat top center;
 }
 
 .content {
@@ -83,7 +30,7 @@ body{
 #moi, #single, #contact {
     margin: 0 auto;
     overflow: hidden;
-    padding: 3em 0;
+    padding: 2em 0;
     position: relative;
     width: 960px;
 }
@@ -93,12 +40,12 @@ body{
     float: left;
     margin-left: 0;
     padding-top: 0;
-    width: 286px;
-    padding-right: 1.8em;
+    width: 305px;
+    padding-right: 0.9em;
 
 }
 
-#presentation h1, #dernierPost h2, #travaux h2, #gallery h2, #post h2, #single h1, #contact h2 {
+#presentation h1, #dernierPost h2, #travaux h2, #gallery h2, #post h2, #single h1 {
     color: #634a0a;
     font-family: 'CarterOneRegular';
     font-size: 2em;
@@ -112,7 +59,6 @@ body{
     line-height: 1.4;
     margin: 0;
     padding: 15px 0 0;
-    text-align: justify;
     text-shadow: 1px 1px 0 #f4dcb6;
 }
 
@@ -124,7 +70,7 @@ body{
     opacity: 0.6;
 }
 
-#travaux h3, #dernierPost h3 a, #gallery h3, #post h3 a, #single h2, #reseaux h3{
+#travaux h3, #dernierPost h3 a, #gallery h3, #post h3 a, #single h2{
     color: #634a0a;
     font-family: 'AndikaRegular';
     font-size: 1.5em;
@@ -135,10 +81,8 @@ body{
 }
 
 #travaux{
-    background: url(../../img/tst/bg-featured.gif) repeat-x top center;
-    padding: 3em 0 2em 0;
+    padding-bottom: 2em;
     width: 100%;
-    border-bottom: 1px solid white;
 }
 
 
@@ -155,6 +99,7 @@ body{
     float: left;
     padding-right: 1.2em;
     width: 300px;
+    position: relative;
 }
 
 #travaux li:last-child, #gallery li:last-child {
@@ -177,8 +122,11 @@ body{
 }
 
 #dernierPost h2, #post h2 {
-    margin-top: 1em;
     padding-bottom: 0.5em;
+}
+
+#post h2 {
+    margin-top: 1em;
 }
 
 #dernierPost a:hover {
@@ -219,8 +167,8 @@ body{
 }
 
 #dernierPost article {
-    width: 300px;
-    margin-left: 20px;
+    width: 306px;
+    margin-left: 10px;
     display: inline-block;
 }
 
@@ -228,10 +176,90 @@ body{
     margin-left: 0;
 }
 
+/* Design v2 */
+
+#header{
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 1.4em;
+}
+
+#header nav{
+    display: block;
+    width: 960px;
+    margin: 0 auto;  
+}
+
+#header ul {
+    width: 520px;
+    margin: 0 0 0 27.5em;
+    padding: 0;
+}
+
+#header li, #header a {
+    display: inline-block;
+    padding: 0 0.5em 0 0.5em;    
+}
+
+#header li a {
+    text-decoration: none;
+    color: white; 
+    padding-top: 0.4em;
+    padding-bottom:  0.4em;
+    margin-top: 0.4em;
+}
+
+#header a:hover {
+    color: black;
+    background: white;
+    border-radius: 10px 10px 0 0;
+}
+
+#header .current-menu-item a {
+    color: black;
+    background: white;
+    border-radius: 10px 10px 0 0;
+}
+
+
+
+footer, #header {
+    background: url(../../img/tst/footer.jpg) repeat;
+}
+
+#reseaux h3{
+    color: white;
+    font-family: 'AndikaRegular';
+    font-size: 1.5em;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+#contact h2 {
+    color: white;
+    font-family: 'CarterOneRegular';
+    font-size: 2em;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+#reseaux a {
+    color: rgb(200,200,200);
+}
+
+#reseaux a:hover {
+    color: #3E9ED6;
+}
+
+/* Code OK a retransfere avec grid et less */ 
+
 form {
     display: inline-block;
     width: 610px;
-    margin-top: 1em;
+    margin-top: 2em;
+    color: white;
 }
 
 fieldset {
@@ -286,19 +314,16 @@ label, input {
     margin-bottom: 0;
 }
 
-#btn {
-    width: 30em;
-    margin-left: 8.2em;
+#envoyer {
+    width: 25.8em;
+    margin-left: 6.3em;
 }
 
-#btn input[type=submit] {    
-    margin-right: 0.75em;
-}
 
-#btn input{
-    
+
+#envoyer, #mc-embedded-subscribe{
+
     display: inline-block;
-    width: 12em;
     padding-bottom: 0.2em;
 
     background-color: #3E9ED6;
@@ -348,7 +373,7 @@ label, input {
         0px 4px 5px rgba(0,0,0,0.5);
 }
 
-#btn input:hover{
+#envoyer:hover , #mc-embedded-subscribe:hover{
     background-color: #8AC5FD;
 
     background-image: -webkit-gradient(
@@ -369,15 +394,15 @@ label, input {
         );
 }
 
-#reseaux {
+#reseaux, #mc_embed_signup #mc_embed_signup div{
     display: inline-block;
     width: 340px;
     vertical-align: top;
-    margin-top: 0.7em;
+    margin-top: 1.8em;
 }
 
 #reseaux h3{
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 #fb {
@@ -385,17 +410,42 @@ label, input {
 }
 
 #fb span{
-  display: inline-block;
-  height: 64px;
-  width: 64px;
-  background: url("../../img/spritefb.png") 0px 0px;
-  text-indent: -9999px;
-  margin-right: 1em;
-  vertical-align: middle;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: url("../../img/tst/spritefb.png") 0px 0px;
+    text-indent: -9999px;
+    margin-right: 0.5em;
+    vertical-align: middle;
 }
 #fb:hover span{
-  display: inline-block;
-  height: 64px;
-  width: 64px;
-  background: url("../../img/spritefb.png") 0px 64px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-position: 0px 40px;
+}
+
+#mc_embed_signup {
+    margin-top: 0.8em;
+}
+
+#mc_embed_signup form {
+    margin: 0;
+}
+
+#mc_embed_signup div {
+    display:inline;
+}
+
+#mc_embed_signup label {
+    display: none;
+}
+
+#mce-EMAIL {
+    padding: 0.2em  0 0.2em 0.5em;
+    width: 330px;
+}
+
+#mc-embedded-subscribe {
+    width: 340px;
 }
