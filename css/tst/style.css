@@ -63,7 +63,7 @@ body{
     opacity: 0.6;
 }
 
-#travaux h3, #dernierPost h3 a, #gallery h3, #post h3 a, #single h2{
+#travaux h3, #dernierPost h3 a, #gallery h3, #post h3 a, #single h2, #sidebar h3{
     color: #634a0a;
     font-family: 'AndikaRegular';
     font-size: 1.5em;
@@ -79,7 +79,7 @@ body{
 }
 
 
-#travaux ul, #gallery ul, #post ul {
+#travaux ul, #gallery ul {
     color: #525252;
     list-style: none;
     margin: 0 auto;
@@ -88,7 +88,7 @@ body{
     width: 960px;
 }
 
-#travaux li, #gallery li, #post li {
+#travaux li, #gallery li {
     float: left;
     padding-right: 1.2em;
     width: 300px;
@@ -213,7 +213,6 @@ body{
     border-radius: 10px 10px 0 0;
 }
 
-
 footer, #header {
     background: url(../../img/tst/footer.jpg) repeat;
 }
@@ -243,6 +242,44 @@ footer, #header {
 #reseaux a:hover {
     color: #3E9ED6;
 }
+
+
+
+#post {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#post ul {
+    width: 640px;
+    padding: 0;
+}
+
+#post li {
+    float: left;
+    padding-right: 1.33em;
+    width: 300px;
+    list-style: none;
+    
+}
+
+#sidebar {
+    width: 310px;
+    display:  inline-block;
+    margin-top: 0.85em;
+}
+
+#sidebar form {
+    margin-top: 1em;
+}
+
+#sidebar label {
+    display: none;
+}
+
+
+
+
 
 /* Code OK a retransfere avec grid et less */ 
 
@@ -311,7 +348,7 @@ label, input {
     margin-left: 6.3em;
 }
 
-#envoyer, #mc-embedded-subscribe{
+#envoyer, #mc-embedded-subscribe, #searchsubmit{
 
     display: inline-block;
     padding-bottom: 0.2em;
@@ -363,7 +400,7 @@ label, input {
         0px 4px 5px rgba(0,0,0,0.5);
 }
 
-#envoyer:hover , #mc-embedded-subscribe:hover{
+#envoyer:hover , #mc-embedded-subscribe:hover, #searchsubmit:hover{
     background-color: #8AC5FD;
 
     background-image: -webkit-gradient(
@@ -439,3 +476,4 @@ label, input {
 #mc-embedded-subscribe {
     width: 315px;
 }
+

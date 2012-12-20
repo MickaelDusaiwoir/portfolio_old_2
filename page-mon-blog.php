@@ -28,7 +28,10 @@ get_header();
             endif;
             ?>
         </ul>
-    </div>    
+    </div> 
+    <div id="sidebar">
+        <?php dynamic_sidebar('primary'); ?>
+    </div>
 </div>
 <?php
 get_footer();
