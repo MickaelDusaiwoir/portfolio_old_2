@@ -41,7 +41,7 @@ if (!empty($nom) && !empty($mail) && !empty($msg)) {
     $destinataire = 'mickael.dusaiwoir@student.hepl.be';
     $sujet = 'Titre du message';
     $contenu = '<html><head><title>Titre du message</title></head><body>';
-    $contenu .= '<p>Bonjour, vous avez reçu un message à partir de votre site web.</p>';
+    $contenu .= '<p>Bonjour, vous avez reçu un message de votre site web (Magic of design - Portfolio ).</p>';
     $contenu .= '<p><strong>Nom</strong>: ' . $nom . '</p>';
     $contenu .= '<p><strong>Email</strong>: ' . $mail . '</p>';
     $contenu .= '<p><strong>Message</strong>: ' . $msg . '</p>';
