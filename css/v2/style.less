@@ -1,0 +1,319 @@
+@import "grid.less";
+
+.transform(){
+    transform: translate3d(0,0,0);
+    -ms-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0,0,0);
+    -o-transform:translate3d(0,0,0);
+}
+
+.rounded(@radius : 5px){
+    -moz-border-radius:@radius; 
+    -webkit-border-radius:@radius;
+    border-radius:@radius;
+}
+
+///////////////////////////////////// debut design supp à 960px
+
+@font-face {
+    font-family: 'CarterOneRegular';
+    src: url('../../fonts/carterone-webfont.eot');
+    src: url('../../fonts/carterone-webfont.eot?#iefix') format('embedded-opentype'), url('../../fonts/carterone-webfont.woff') format('woff'),  url('../../fonts/carterone-webfont.svg#CarterOneRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {        
+    font-family: 'AndikaRegular';
+    src: url('../../fonts/andika-r-webfont.eot');
+    src: url('../../fonts/andika-r-webfont.eot?#iefix') format('embedded-opentype'), url('../../fonts/andika-r-webfont.woff') format('woff'),  url('../../fonts/andika-r-webfont.svg#AndikaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font: normal 15px Helvetica, Arial, Sans-Serif;
+    line-height: 1.5;
+    overflow: scroll;
+    padding-bottom: 2em;
+    background: url('../img/fond.png') repeat;
+    margin: 0 auto;
+    width: 960px;
+}
+
+#content, #moi, #single, #contact {
+    .column(12);
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+#presentation {
+    .column(4);
+    margin-right: 0.8em;
+}
+
+#presentation h1, #dernierPost h2, #travaux h2, #gallery h2, #post h2, #single h1 {
+    font-family: 'CarterOneRegular';
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px 0 #fff;
+    color: #222;
+}
+
+#presentation p, #infoSingle p {
+    font-size: 1.1em;
+    margin: 0 auto;
+    padding: 1em 0 0;
+}
+
+#tvxHasard img, #travaux img, #gallery img, #image img {
+    border: 3px solid #fff;
+}
+
+#travaux h3, #dernierPost h3 a, #gallery h3, #post h3 a, #single h2, #sidebar h3 {
+    font-family: 'AndikaRegular';
+    font-size: 1.5em;
+    margin: 0 auto;
+    padding: 0;
+    text-shadow: 1px 1px 0 #fff;
+    color: #222;
+}
+
+#travaux{
+    padding-bottom: 2em;
+    width: 100%;
+}
+
+#travaux ul, #gallery ul {
+    color: #525252;
+    list-style: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    .column(12);
+}
+
+#travaux li, #gallery li {
+    padding-right: 0.8em;
+    .column(4);
+    margin: 0 auto;
+}
+
+#travaux li:last-child, #gallery li:last-child {
+    padding-right: 0;
+}
+
+#travaux h2, #dernierPost h2, #gallery h2, #post h2 {
+    .column(12);
+    margin: 0 auto;
+    padding-bottom: 0.5em;
+}
+
+#travaux li h3 {
+    margin-top: 0.4em;
+}
+
+#dernierPost h2, #post h2 {
+    padding-bottom: 0.5em;
+}
+
+#post h2 {
+    margin-top: 1em;
+}
+
+#dernierPost a {
+    font-size: 1.05em;
+}
+
+#dernierPost a:hover {
+    color: #063797;
+}
+
+#dernierPost p, #dernierPost article {
+    font-size: 1em;
+    .column(4);
+}
+
+#dernierPost {
+    padding-bottom: 1em;
+}
+
+#dernierPost article {
+    vertical-align: top;
+    margin-right: 0.8em;
+}
+
+#dernierPost article:last-child {
+    margin-right: 0;
+}
+
+#dernierPost h3 a {
+    color: #063797;
+    text-shadow: none;
+}
+
+#dernierPost h3 a:hover {
+    color: black;
+}
+
+#gallery {
+    padding: 2em 0;
+}
+
+#post a:hover {
+    color: black;
+}
+
+#image {
+    margin-bottom: 1em;
+}
+
+#image ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 0.8em 0 0;
+    .column(4);
+}
+
+#image li {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0.3em;
+}
+
+#image li img {
+    width: 94.5%;
+    height: 94.5%;
+}
+
+#infoSingle {
+    .column(8);
+    margin-left: 21.5em; 
+}
+
+#infoSingle h1 {
+    padding-bottom: 0.25em;
+}
+
+#infoSingle p {
+    padding: 0;
+    margin: 0.5em 0;
+    line-height: 1.5;
+}
+
+#infoSingle #date {
+    font-size: 0.85em;
+    padding: 0;
+}
+
+#single section {
+    .column(5);
+    margin: 2em auto 0 auto;
+}
+
+#single section h2 {
+    text-align: center;
+    .column(5);
+    margin: 0 auto;
+}
+
+
+
+
+#commentform .comment-notes {
+    display: none;
+}
+
+#respond {
+    .column(5);
+    margin: 1em auto 0 auto;
+}
+
+#commentform {
+    .column(5);
+    padding: 1.33em 1.33em 0.66em 1.33em;
+    margin: 0 0 0 -1.33em;
+    background: #f0f0f0;
+    overflow:auto;
+
+    /* Border style */
+    border: 1px solid #cccccc;
+    -moz-border-radius: 0.46em;
+    -webkit-border-radius: 0.46em;
+    border-radius: 0.46em; 
+
+    /* Border Shadow */
+    -moz-box-shadow: 2px 2px 2px #cccccc;
+    -webkit-box-shadow: 2px 2px 2px #cccccc;
+    box-shadow: 2px 2px 2px #cccccc;
+    color: black;
+}
+
+#commentform label {
+    text-shadow: 2px 2px 2px #ccc;
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin: 0 0.6em 0 0;
+    text-align: right;
+    width: 120px;
+}
+
+#commentform input{
+    padding: 0.33em;
+    border: 1px solid #b9bdc1;
+    .column(3);
+    color: #797979;
+    margin: 0;
+}
+
+#commentform textarea {
+    .column(3);
+    height: 5em;
+}
+
+#commentform input[type=submit] {
+    margin: 0 0 0 9.8em;
+    .column(3);
+}
+
+#reply-title {
+    display: none;
+}
+
+#commentform p {
+    margin: 1em 0;
+}
+
+
+.commentaire {
+    width: 400px;
+    margin: 1.5em auto;
+    padding: 0px 20px; 
+    border: 1px solid #f0f0f0;
+    moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px; 
+}
+
+.commentaire p:first-child {
+    background-color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    moz-border-radius: 7px 7px 0px 0px;
+    -webkit-border-radius: 7px 7px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
+    margin: 0 -20px;
+    padding: 5px 20px;
+}
+
+.commentaire p {
+    margin: 0.5em 0;
+}
+
+.commentaire em {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.1em;
+}

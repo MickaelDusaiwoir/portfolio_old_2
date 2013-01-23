@@ -15,10 +15,10 @@
 }
 
 body{
-    font: normal 15px Helvetica, Arial, Sans-Serif;
+    font: 15px Helvetica, Arial, Sans-Serif;
     line-height: 1.4;
     margin: 0;
-    background: url(../../img/tst/bg-headliner.gif) repeat top center;
+    background: url(../../img/tst/fond.png) repeat top center;
 }
 
 #moi, #single, #contact {
@@ -28,7 +28,7 @@ body{
     width: 960px;
 }
 
-#presentation, #infoSingle {
+#presentation {
     background: none;
     float: left;
     margin-left: 0;
@@ -39,38 +39,34 @@ body{
 }
 
 #presentation h1, #dernierPost h2, #travaux h2, #gallery h2, #post h2, #single h1 {
-    color: #634a0a;
     font-family: 'CarterOneRegular';
     font-size: 2em;
     line-height: 1.4;
     margin: 0;
     padding: 0;
-    text-shadow: 1px 1px 0 #fff0d8;
+    text-shadow: 1px 1px 0 #fff;
+    color: #222;
 }
 
 #presentation p, #infoSingle p {
     line-height: 1.4;
+    font-size: 1.1em;
     margin: 0;
     padding: 15px 0 0;
-    text-shadow: 1px 1px 0 #f4dcb6;
 }
 
 #tvxHasard img, #travaux img, #gallery img, #image img {
     border: 3px solid #fff;
 }
 
-#tvxHasard a:hover img, #travaux a:hover img, #gallery a:hover img {
-    opacity: 0.6;
-}
-
-#travaux h3, #dernierPost h3 a, #gallery h3, #post h3 a, #single h2, #sidebar h3{
-    color: #634a0a;
+#travaux h3, #dernierPost h3 a, #gallery h3, #post h3 a, #single h2, #sidebar h3 {
     font-family: 'AndikaRegular';
     font-size: 1.5em;
     line-height: 1.4;
     margin: 0;
     padding: 0;
-    text-shadow: 1px 1px 0 #fff0d8;
+    text-shadow: 1px 1px 0 #fff;
+    color: #222;
 }
 
 #travaux{
@@ -101,12 +97,16 @@ body{
 #travaux h2, #dernierPost h2, #gallery h2, #post h2 {
     width: 960px;
     margin: 0 auto;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
 }
 
 #travaux li h3, #dernierPost h3, #gallery h3, #post h3 {
-    margin-top: 0.5em;
+    margin-top: 0em;
     width: 300px;
+}
+
+#travaux li h3 {
+    margin-top: 0.4em;
 }
 
 #travaux ul:after, #gallery ul:after, #post ul:after {
@@ -121,16 +121,30 @@ body{
     margin-top: 1em;
 }
 
+#dernierPost a {
+    font-size: 1.05em;
+}
+
 #dernierPost a:hover {
-    color: black;
+    color: #063797;
 }
 
 #dernierPost p {
     font-size: 1em;
+    width: 300px;
 }
 
 #dernierPost {
-    padding-bottom: 2em;
+    padding-bottom: 1em;
+}
+
+#dernierPost h3 a {
+    color: #063797;
+    text-shadow: none;
+}
+
+#dernierPost h3 a:hover {
+    color: black;
 }
 
 #gallery {
@@ -141,17 +155,153 @@ body{
     color: black;
 }
 
-#single article, #single section{
-    margin-left: 1em;
+
+#image {
+    margin-bottom: 1em;
+}
+
+#image ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 1.33em 0 0;
+    display: inline-block;
+    width: 185px;
+}
+
+#image li {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0.5em;
+}
+
+#image li img {
+    width: 94.5%;
+    height: 94.5%;
+}
+
+
+#infoSingle {
+    width: 605px;
+    margin-left: 13.9em; 
+}
+
+#infoSingle h1 {
+    padding-bottom: 0.25em;
+}
+
+#infoSingle p {
+    padding: 0;
+    margin: 0.5em 0;
+    line-height: 1.5;
+}
+
+#infoSingle #date {
+    font-size: 0.85em;
+    padding: 0;
 }
 
 #single section {
     margin-top: 2em;
 }
 
+#single section h2 {
+    text-align: center;
+}
+
+
 #commentform .comment-notes {
     display: none;
 }
+
+#respond {
+    width: 400px;
+    margin: 0 auto;
+}
+
+#commentform {
+    width: 400px;
+    padding: 20px 20px 10px 20px;
+    margin: 0 0 0 -20px;
+    background: #f0f0f0;
+    overflow:auto;
+
+    /* Border style */
+    border: 1px solid #cccccc;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px; 
+
+    /* Border Shadow */
+    -moz-box-shadow: 2px 2px 2px #cccccc;
+    -webkit-box-shadow: 2px 2px 2px #cccccc;
+    box-shadow: 2px 2px 2px #cccccc;
+    color: black;
+}
+
+#commentform label {
+    text-shadow: 2px 2px 2px #ccc;
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin: 0 0.6em 0 0;
+    text-align: right;
+    width: 120px;
+}
+
+#commentform input{
+    padding: 0.33em;
+    border: 1px solid #b9bdc1;
+    width: 250px;
+    color: #797979;
+    margin: 0;
+}
+
+#commentform textarea {
+    width: 259px;
+    height: 5em;
+}
+
+#commentform input[type=submit] {
+    margin: 0 0 0 7.4em;
+    width: 260px;
+}
+
+#commentform p {
+    margin: 1em 0;
+}
+
+.commentaire {
+    width: 400px;
+    margin: 1.5em auto;
+    padding: 0px 20px; 
+    border: 1px solid #f0f0f0;
+    moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px; 
+}
+
+.commentaire p:first-child {
+    background-color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    moz-border-radius: 7px 7px 0px 0px;
+    -webkit-border-radius: 7px 7px 0px 0px;
+    border-radius: 7px 7px 0px 0px;
+    margin: 0 -20px;
+    padding: 5px 20px;
+}
+
+.commentaire p {
+    margin: 0.5em 0;
+}
+
+.commentaire em {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.1em;
+}
+
+
 
 #dernierPost div {
     width: 960px;
@@ -182,35 +332,93 @@ body{
     margin: 0 auto;  
 }
 
-#header ul {
-    width: 520px;
-    margin: 0 0 0 28.5em;
+#header ul{
+    display: table;
+    width: 22em;
+    margin: 1em 0 1em 22.85em;
     padding: 0;
+
+    background: -webkit-linear-gradient(deepskyblue, dodgerblue);
+    background:    -moz-linear-gradient(deepskyblue, dodgerblue);
+    background:     -ms-linear-gradient(deepskyblue, dodgerblue);
+    background:      -o-linear-gradient(deepskyblue, dodgerblue);
+    background:         linear-gradient(deepskyblue, dodgerblue);
+    background: dodgerblue;
+
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
 }
 
-#header li, #header a {
-    display: inline-block;
-    padding: 0 0.5em 0 0.5em;    
+#header ul li{
+    display: table-cell;
 }
 
-#header li a {
+#header li a{
+    display: block;
+    text-align: center;
+    color: rgba(0, 0, 0, .7); 
     text-decoration: none;
-    color: white; 
-    padding-top: 0.4em;
-    padding-bottom:  0.4em;
-    margin-top: 0.4em;
+    padding: 0.38em 0.38em 0.8em 0.38em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+    /* effet d'incrustation du menu */
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 
+        0 -1px 0 hsl(210, 100%, 32%) inset, 
+        0 -2px 0 hsl(210, 100%, 38%) inset, 
+        0 -3px 0 hsl(210, 100%, 44%) inset, 
+        0 -4px 0 hsl(210, 100%, 50%) inset, 
+        0 -5px 0 hsl(210, 100%, 60%) inset;
+    transition: all .3s .1s;
+    position: relative;
 }
 
-#header a:hover {
-    color: black;
-    background: white;
-    border-radius: 10px 10px 0 0;
+#header li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0.42em;
+    margin-left: -2px;
+    width: 0.19em;
+    height: 0.19em;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .5);
 }
 
-#header .current-menu-item a {
-    color: black;
+#header li a:hover::before, #header li a:focus::before, #header .current-menu-item a::before{
     background: white;
-    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 2px white, 
+        0 -1px 0 rgba(0, 0, 0, .4);
+}
+
+#header li:first-child a{
+    border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    -webkit-border-radius: 3px 0 0 3px;
+}
+
+#header li:last-child a{
+    border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    -webkit-border-radius: 0 3px 3px 0;
+}
+
+#header li a:hover, #header li a:focus, #header .current-menu-item a {
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 
+        0 -1px 0 hsl(210, 100%, 42%) inset, 
+        0 -2px 0 hsl(210, 100%, 48%) inset, 
+        0 -3px 0 hsl(210, 100%, 54%) inset, 
+        0 -4px 0 hsl(210, 100%, 60%) inset, 
+        0 -5px 0 hsl(210, 100%, 70%) inset; 
+    padding: 0.38em 1.19em 0.8em 1.19em;
+    transition: all .3s 0s;
+}
+
+#header li a:active, #header .current-menu-item a {
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.1)); 
+    box-shadow: 0 0 2px rgba(0,0,0,.3) inset;
 }
 
 footer, #header {
@@ -257,16 +465,16 @@ footer, #header {
 
 #post li {
     float: left;
-    padding-right: 1.33em;
+    margin-right: 1.3em;
     width: 300px;
     list-style: none;
-    
+
 }
 
 #sidebar {
     width: 310px;
     display:  inline-block;
-    margin-top: 0.85em;
+    margin-top: 0.3em;
 }
 
 #sidebar form {
@@ -348,77 +556,36 @@ label, input {
     margin-left: 6.3em;
 }
 
-#envoyer, #mc-embedded-subscribe, #searchsubmit{
+#envoyer, #mc-embedded-subscribe, #commentform input[type=submit]{
 
     display: inline-block;
-    padding-bottom: 0.2em;
+    padding: 0.2em 0 0.1em 0;
 
-    background-color: #3E9ED6;
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, rgb(112,181,242)),
-        color-stop(0.49, rgb(84,164,238)),
-        color-stop(0.5, rgb(54,144,240)),
-        color-stop(1, rgb(26,97,219))
-        );
-    background-image: -moz-linear-gradient(
-        center top,
-        rgb(112,181,242) 0%,
-        rgb(84,164,238) 49%,
-        rgb(54,144,240) 50%,
-        rgb(26,97,219) 100%
-        );
+    background-color: -webkit-linear-gradient(deepskyblue, dodgerblue);
+    background-color:    -moz-linear-gradient(deepskyblue, dodgerblue);
+    background-color:     -ms-linear-gradient(deepskyblue, dodgerblue);
+    background-color:      -o-linear-gradient(deepskyblue, dodgerblue);
+    background-color:         linear-gradient(deepskyblue, dodgerblue);
+    background-color: dodgerblue;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
+
     color: #fff;
-    font-weight: bold;
     text-decoration: none;
     text-align: center;
     line-height: 1.5;
-    text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
-    border: 1px solid;
-    border-color: #2f71a3 #265a82 #1e4766 #265a82;
-    border-radius: 8px;
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
-    box-shadow: 		
-        inset 0px 4px 5px rgba(255,255,255,0.4),
-        inset 0px -1px 5px rgba(255,255,255,0.2),
-        0px 2px 0px #1e4766,
-        0px 4px 5px rgba(0,0,0,0.5);
-
-    -moz-box-shadow: 	
-        inset 0px 4px 5px rgba(255,255,255,0.4),
-        inset 0px -1px 5px rgba(255,255,255,0.2),
-        0px 2px 0px #1e4766,
-        0px 4px 5px rgba(0,0,0,0.5);
-
-    -webkit-box-shadow: 
-        inset 0px 4px 5px rgba(255,255,255,0.4),
-        inset 0px -1px 5px rgba(255,255,255,0.2),
-        0px 2px 0px #1e4766,
-        0px 4px 5px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
-#envoyer:hover , #mc-embedded-subscribe:hover, #searchsubmit:hover{
-    background-color: #8AC5FD;
-
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, rgb(134,193,253)),
-        color-stop(0.49, rgb(153,213,255)),
-        color-stop(0.5, rgb(130,194,253)),
-        color-stop(1, rgb(108,170,229))
-        );
-    background-image: -moz-linear-gradient(
-        center top,
-        rgb(134,193,253) 0%,
-        rgb(153,213,255) 49%,
-        rgb(130,194,253) 50%,
-        rgb(108,170,229) 100%
-        );
+#envoyer:hover , #mc-embedded-subscribe:hover, #searchsubmit:hover, #commentform input[type=submit]:hover {
+    background: #3fb2ff; /* 1e90ff */
 }
 
 #reseaux, #mc_embed_signup #mc_embed_signup div{
@@ -453,7 +620,7 @@ label, input {
 }
 
 #mc_embed_signup {
-    margin-top: 3.4em;
+    margin-top: 3.2em;
 }
 
 #mc_embed_signup form {
@@ -461,7 +628,8 @@ label, input {
 }
 
 #mc_embed_signup div {
-    display:inline;
+    display: inline;
+
 }
 
 #mc_embed_signup label {
@@ -471,9 +639,50 @@ label, input {
 #mce-EMAIL {
     padding: 0.2em  0 0.2em 0.5em;
     width: 303px;
+    margin: 0.15em 0 0.85em 0;
 }
 
 #mc-embedded-subscribe {
     width: 315px;
 }
 
+/* side bare  */
+
+#recentcomments {
+    padding: 0;
+    list-style: none;
+}
+
+#recentcomments li {
+    margin: 0.5em 0;
+}
+
+#wp-calendar {
+    width: 200px;
+    margin-top: 0.5em;
+}
+
+#wp-calendar caption {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+#wp-calendar td {
+    padding: 0 0 0 0.6em;
+}
+
+#wp-calendar #today {
+    background: dodgerblue;
+}
+
+.type-blog, #commentaire {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#commentaire .no_comment {
+    width: 400px;
+    margin: 0.5em auto;
+    padding: 0;
+}

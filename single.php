@@ -4,14 +4,15 @@ get_header();
 
 <div class="content">
     <div id="single"> 
-        <?php
-        if (have_posts()):
-            while (have_posts()):
-                the_post();
-                ?>
-                <article>                    
+        <article>                   
+            <div id="image"> 
+                <?php include "slide.php" ?>
+                <?php
+                if (have_posts()):
+                    while (have_posts()):
+                        the_post();
+                        ?>
 
-                    <div id="image">                    
                         <?php
                         if (preg_match('/ipad|SCH-I800/i', $_SERVER['HTTP_USER_AGENT'])) {
                             the_post_thumbnail('ipad');
@@ -22,14 +23,14 @@ get_header();
                         }
                         ?>
                     </div>
-                    
+
                     <div id="infoSingle">
                         <h1><?php the_title(); ?></h1>
+                        <p id="date"><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>
                         <?php the_excerpt(); ?>
                         <?php the_content(); ?>
-                        <p><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>
                     </div>
-                    
+
                 </article>
                 <section>
                     <?php comments_template(); ?>
