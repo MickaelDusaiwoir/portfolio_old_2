@@ -320,6 +320,8 @@ body{
 
 /* Design v2 */
 
+
+
 #header{
     margin: 0 auto;
     overflow: hidden;
@@ -424,6 +426,24 @@ body{
 footer, #header {
     background: url(../../img/tst/footer.jpg) repeat;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #reseaux h3{
     color: white;

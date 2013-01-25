@@ -143,81 +143,81 @@ get_header();
             ?>
         </div>
     </div>
-    <footer>
-        <div id="contact">
-            <h2>
-                <?php _e('Me contacter') ?>
-            </h2>
-            <?php if ($envoyer == TRUE) : ?>
-                <p id="envoyer">Votre message &agrave; bien &eacute;t&eacute; envoy&eacute</p>
-            <?php endif; ?>
-            <form method="post" action="index.php#formulaire">
-                <a name="formulaire"></a>
-                <fieldset>
-                    <label for="Nom"> 
-                        Nom Prénom 
-                    </label>
-                    <input type="text" id="nom" placeholder="Introduisez votre nom et prénom" name="nom" <?php
-            if (isset($nom)) {
-                echo('value="' . $nom . '"');
-            }
-            ?>/>
-                           <?php if ($erreur['nom'] == TRUE): ?>
-                        <p class="erreur">Entrez votre Nom et pr&eacute;nom</p>
-                    <?php endif; ?>
-                    <label for="mail">
-                        Email
-                    </label>
-                    <input type="email" id="mail" placeholder="Introduisez votre email" name="mail" <?php
-                    if (isset($mail)) {
-                        echo 'value="' . $mail . '"';
-                    }
-                    ?>/>
-                           <?php
-                           if ($erreur['mail1'] == TRUE || $erreur['mail2']) :
-                               if ($erreur['mail2'] == TRUE) :
-                                   ?>
-                            <p class="erreur">Entrez une adresse email valide</p>
-                        <?php else : ?>
-                            <p class="erreur">Entrez votre adresse email</p>
-                        <?php
-                        endif;
+</div>
+<footer>
+    <div id="contact">
+        <h2>
+            <?php _e('Me contacter') ?>
+        </h2>
+        <?php if ($envoyer == TRUE) : ?>
+            <p id="envoyer">Votre message &agrave; bien &eacute;t&eacute; envoy&eacute</p>
+        <?php endif; ?>
+        <form method="post" action="index.php#formulaire">
+            <a name="formulaire"></a>
+            <fieldset>
+                <label for="Nom"> 
+                    Nom Prénom 
+                </label>
+                <input type="text" id="nom" placeholder="Introduisez votre nom et prénom" name="nom" <?php
+        if (isset($nom)) {
+            echo('value="' . $nom . '"');
+        }
+        ?>/>
+                       <?php if ($erreur['nom'] == TRUE): ?>
+                    <p class="erreur">Entrez votre Nom et pr&eacute;nom</p>
+                <?php endif; ?>
+                <label for="mail">
+                    Email
+                </label>
+                <input type="email" id="mail" placeholder="Introduisez votre email" name="mail" <?php
+                if (isset($mail)) {
+                    echo 'value="' . $mail . '"';
+                }
+                ?>/>
+                       <?php
+                       if ($erreur['mail1'] == TRUE || $erreur['mail2']) :
+                           if ($erreur['mail2'] == TRUE) :
+                               ?>
+                        <p class="erreur">Entrez une adresse email valide</p>
+                    <?php else : ?>
+                        <p class="erreur">Entrez votre adresse email</p>
+                    <?php
                     endif;
-                    ?>
-                    <label for="msg">
-                        Message
-                    </label>
+                endif;
+                ?>
+                <label for="msg">
+                    Message
+                </label>
 
-                    <textarea id="msg" rows="4" cols="58" placeholder="Que souhaitez vous me dire !!" name="msg"><?php
-                    if (isset($msg)) {
-                        echo ($msg);
-                    }
-                    ?></textarea>
-                    <?php if ($erreur['msg'] == TRUE): ?>
-                        <p class="erreur">Entrez votre message</p>
-                    <?php endif; ?>
-                    <input type="submit" name="submit" id="envoyer" />    
-                </fieldset>
-            </form>
-            <div id="reseaux">
-                <h3><?php _e('Suivez moi sur facebook') ?></h3>
-                <a href="https://www.facebook.com/DusaiwoirMickael" title="Page de Mickael Dusaiwoir" Alt="Se rendre sur la page facebook de Mickael Dusaiwoir" id="fb"><span>...</span>Mickael Dusaiwoir</a>
+                <textarea id="msg" rows="4" cols="58" placeholder="Que souhaitez vous me dire !!" name="msg"><?php
+                if (isset($msg)) {
+                    echo ($msg);
+                }
+                ?></textarea>
+                <?php if ($erreur['msg'] == TRUE): ?>
+                    <p class="erreur">Entrez votre message</p>
+                <?php endif; ?>
+                <input type="submit" name="submit" id="envoyer" />    
+            </fieldset>
+        </form>
+        <div id="reseaux">
+            <h3><?php _e('Suivez moi sur facebook') ?></h3>
+            <a href="https://www.facebook.com/DusaiwoirMickael" title="Page de Mickael Dusaiwoir" Alt="Se rendre sur la page facebook de Mickael Dusaiwoir" id="fb"><span>...</span>Mickael Dusaiwoir</a>
 
-                <div id="mc_embed_signup">
-                    <h3>Inscrivez vous à la newsletter</h3>
-                    <form action="http://magic-of-design.us6.list-manage.com/subscribe/post?u=9a6af94c92a351b99d19455c6&amp;id=b3b5b9430f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup">
+                <h3>Inscrivez vous à la newsletter</h3>
+                <form action="http://magic-of-design.us6.list-manage.com/subscribe/post?u=9a6af94c92a351b99d19455c6&amp;id=b3b5b9430f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
-                        <div class="mc-field-group">
-                            <label for="mce-EMAIL">Email</label>
-                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Indiquez votre adresse mail">
-                        </div>
-                        <input type="submit" value="S'abonner" name="subscribe" id="mc-embedded-subscribe" class="button">
-                    </form>
-                </div>
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email</label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Indiquez votre adresse mail">
+                    </div>
+                    <input type="submit" value="S'abonner" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </form>
             </div>
         </div>
-    </footer>
-</div>
+    </div>
+</footer>
 
 <?php
 get_footer();

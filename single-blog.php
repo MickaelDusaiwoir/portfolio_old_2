@@ -9,13 +9,10 @@ get_header();
             ?>
             <article <?php post_class(); ?>>
                 <h2><?php the_title(); ?></h2>
-                <p id="date"><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>
-                <div class="thumb">
-                    <?php the_post_thumbnail('thumbnail'); ?>
-                </div>
                 <div class="post_content">
                     <?php the_content(); ?>
                 </div>
+                <p id="date"><?php _e('Publié le '); echo get_the_date(); ?> <?php _e(' par '); echo get_the_author(); ?> - <?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires', 'comments-link', 'Les commentaires sont fermés'); ?></p>
             </article>
             <?php
         endwhile;

@@ -104,6 +104,10 @@ add_filter('comment_form_defaults', 'juiz_manage_default_fields');
 if (!function_exists('juiz_manage_default_fields')) {
 
     function juiz_manage_default_fields($default) {
+        $default['fields']['author'] = '<p class="comment-form-author">
+            <label for="author">Nom</label>
+            <input id="author" type="text" aria-required="true" size="30" placeholder="Introduisez votre nom" name="author">
+        </p>';
         $default['fields']['email'] = '
             <p class="comment-form-email">
                 <label for="email">Email</label>
