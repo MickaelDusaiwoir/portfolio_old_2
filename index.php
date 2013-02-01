@@ -60,7 +60,7 @@ get_header();
 ?>
 <div class="content">
     <div id="moi">
-        <div id="presentation">
+        <div id="presentation" itemscope itemtype="http://schema.org/Article">
             <?php
             $arg = array('post_type' => 'about', 'posts_per_page' => 1);
             $loop = new WP_query($arg);
@@ -69,10 +69,12 @@ get_header();
                 while ($loop->have_posts()):
                     $loop->the_post();
                     ?>
-                    <h1>
+                    <h1 itemprop="name">
                         <?php the_title(); ?>
                     </h1>
-                    <?php the_content(); ?>
+                    <div itemprop="description">
+                        <?php the_content(); ?>
+                    </div>
                     <?php
                 endwhile;
             endif;
@@ -103,9 +105,9 @@ get_header();
                 while ($loop->have_posts()):
                     $loop->the_post();
                     ?>
-                    <li>
-                        <a href="<?php the_permalink(); ?>" title="Allez voir mes travaux"><?php the_post_thumbnail('medium'); ?></a>
-                        <h3>
+                    <li itemscope itemtype="http://schema.org/Article">
+                        <a href="<?php the_permalink(); ?>" title="Allez voir mes travaux" itemprop="url"><?php the_post_thumbnail('medium', 'itemprop="image" '); ?></a>
+                        <h3 itemprop="name">
                             <?php the_title(); ?>
                         </h3>
                     </li>                    
@@ -129,9 +131,11 @@ get_header();
                 while ($loop->have_posts()):
                     $loop->the_post();
                     ?>
-                    <article>
-                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                        <?php the_content($more_link_text, $stripteaser); ?>
+                    <article itemscope itemtype="http://schema.org/Article">
+                        <h3 itemprop="name"><a href="<?php the_permalink(); ?>" itemprop="url"><?php the_title(); ?></a></h3>
+                        <div itemprop="description">
+                            <?php the_excerpt(); ?>
+                        </div>
                         <p><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>  
                         <?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires', 'comments-link', 'Les commentaires sont fermés'); ?>
                     </article>

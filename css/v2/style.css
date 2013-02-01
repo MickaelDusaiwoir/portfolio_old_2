@@ -6,7 +6,7 @@ body:after{clear:both;}
 #travaux li:after,#gallery ul:after,#dernierPost:after,#tvxHasard:after,#post ul:after{clear:both;display:block;overflow:hidden;visibility:hidden;height:0;content:"";}
 #header{margin:0 auto;overflow:hidden;font-size:1.4em;}
 #header nav{display:block;width:960px;margin:0 auto;}
-#header ul{display:table;width:22em;margin:1em 0 1em 23.5em;padding:0;background:-webkit-linear-gradient(#00bfff, #1e90ff);background:-moz-linear-gradient(#00bfff, #1e90ff);background:-ms-linear-gradient(#00bfff, #1e90ff);background:-o-linear-gradient(#00bfff, #1e90ff);background:linear-gradient(#00bfff, #1e90ff);background:dodgerblue;border-radius:3px;box-shadow:0 1px 3px rgba(0, 0, 0, 0.3),0 3px 5px rgba(0, 0, 0, 0.2),0 5px 10px rgba(0, 0, 0, 0.2),0 20px 20px rgba(0, 0, 0, 0.15);}
+#header ul{display:table;width:22em;margin:1em 0 1em 25.5em;padding:0;background:-webkit-linear-gradient(#00bfff, #1e90ff);background:-moz-linear-gradient(#00bfff, #1e90ff);background:-ms-linear-gradient(#00bfff, #1e90ff);background:-o-linear-gradient(#00bfff, #1e90ff);background:linear-gradient(#00bfff, #1e90ff);background:dodgerblue;border-radius:3px;box-shadow:0 1px 3px rgba(0, 0, 0, 0.3),0 3px 5px rgba(0, 0, 0, 0.2),0 5px 10px rgba(0, 0, 0, 0.2),0 20px 20px rgba(0, 0, 0, 0.15);}
 #header ul li{display:table-cell;}
 #header li a{display:block;text-align:center;color:rgba(0, 0, 0, 0.7);text-decoration:none;padding:0.38em 0.38em 0.8em 0.38em;text-shadow:0 1px 0 rgba(255, 255, 255, 0.4);box-shadow:0 1px 0 rgba(255, 255, 255, 0.7) inset,0 -1px 0 #0052a3 inset,0 -2px 0 #0061c2 inset,0 -3px 0 #0070e0 inset,0 -4px 0 #007fff inset,0 -5px 0 #3399ff inset;transition:all .3s .1s;position:relative;}
 #header li a::before{content:'';position:absolute;left:50%;bottom:0.42em;margin-left:-2px;width:0.19em;height:0.19em;border-radius:50%;background:rgba(0, 0, 0, 0.5);}
@@ -41,6 +41,7 @@ p{overflow:hidden;}
 #dernierPost h3 a{color:#063797;text-shadow:none;}
 #dernierPost h3 a:hover{color:black;}
 #gallery{padding:2em 0;}
+#contact #mc-embedded-subscribe-form{width:310px;}
 #post a:hover{color:black;}
 #image{margin-bottom:1em;}
 #image ul{list-style:none;padding:0;margin:0 0.8em 0 0;display:inline-block;width:312px;vertical-align:top;}

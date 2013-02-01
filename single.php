@@ -24,9 +24,9 @@ get_header();
                         ?>
                     </div>
 
-                    <div id="infoSingle">
-                        <h1><?php the_title(); ?></h1>
-                        <p id="date"><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>
+                    <div id="infoSingle" itemscope itemtype="http://schema.org/Article">
+                        <h1 itemprop="name"><?php the_title(); ?></h1>
+                        <p id="date" itemprop="dateCreated"><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>                        
                         <?php the_content(); ?>
                     </div>
 

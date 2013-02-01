@@ -15,12 +15,12 @@ get_header();
                 while ($loop->have_posts()):
                     $loop->the_post();
                     ?>
-                    <li class="news">
-                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <li class="news" itemscope itemtype="http://schema.org/Article">
+                        <h3 itemprop="name"><a href="<?php the_permalink(); ?>" itemprop="url"><?php the_title(); ?></a></h3>
                         <?php the_excerpt(); ?>
                         <div>
-                            <p><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>  
-                            <p><?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires', 'comments-link', 'Les commentaires sont fermés'); ?></p>
+                            <p itemprop="dateCreated"><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>  
+                            <p itemprop="comment"><?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires', 'comments-link', 'Les commentaires sont fermés'); ?></p>
                         </div>
                     </li>
                     <?php

@@ -15,11 +15,13 @@ get_header();
             while ($loop->have_posts()):
                 $loop->the_post();
                 ?>
-                <section>
-                    <h3>
+                <section itemscope itemtype="http://schema.org/Article">
+                    <h3 itemprop="name">
                         <?php the_title(); ?>
                     </h3>
-                    <?php the_content(); ?>
+                    <div itemprop="description">
+                    <?php the_content(); ?>                        
+                    </div>
                 </section>
                 <?php
             endwhile;

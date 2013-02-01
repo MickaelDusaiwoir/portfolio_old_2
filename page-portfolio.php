@@ -16,9 +16,9 @@ get_header();
                 while ($loop->have_posts()):
                     $loop->the_post();
                     ?>
-                    <li>
-                        <a href="<?php the_permalink(); ?>" title="Allez voir mes travaux"><?php the_post_thumbnail('medium'); ?></a>
-                        <h3>
+                    <li itemscope itemtype="http://schema.org/Article">
+                        <a href="<?php the_permalink(); ?>" title="Allez voir mes travaux" itemprop="url"><?php the_post_thumbnail('medium', 'itemprop="image"'); ?></a>
+                        <h3 itemprop="name">
                             <?php the_title(); ?>
                         </h3>
                     </li>                    
