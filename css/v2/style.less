@@ -17,23 +17,22 @@
 
 @font-face {
     font-family: 'CarterOneRegular';
-    src: url('../../fonts/carterone-webfont.eot');
-    src: url('../../fonts/carterone-webfont.eot?#iefix') format('embedded-opentype'), url('../../fonts/carterone-webfont.woff') format('woff'),  url('../../fonts/carterone-webfont.svg#CarterOneRegular') format('svg');
+    src: url('../fonts/carterone-webfont.eot');
+    src: url('../fonts/carterone-webfont.eot?#iefix') format('embedded-opentype'), url('../../fonts/carterone-webfont.woff') format('woff'),  url('../../fonts/carterone-webfont.svg#CarterOneRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {        
     font-family: 'AndikaRegular';
-    src: url('../../fonts/andika-r-webfont.eot');
-    src: url('../../fonts/andika-r-webfont.eot?#iefix') format('embedded-opentype'), url('../../fonts/andika-r-webfont.woff') format('woff'),  url('../../fonts/andika-r-webfont.svg#AndikaRegular') format('svg');
+    src: url('../fonts/andika-r-webfont.eot');
+    src: url('../fonts/andika-r-webfont.eot?#iefix') format('embedded-opentype'), url('../../fonts/andika-r-webfont.woff') format('woff'),  url('../../fonts/andika-r-webfont.svg#AndikaRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 body{
-    font: normal 15px Helvetica, Arial, Sans-Serif;
-    line-height: 1.5;
+    font: normal 90%/1.5 Sans-Serif;
     background: url('../img/fond.png') repeat;
     margin: 0 auto;
     //width: 960px;
@@ -162,12 +161,18 @@ body{
     box-shadow: 0 0 2px rgba(0,0,0,.3) inset;
 }
 
+#header h1 {
+    display: none;
+}
+
 footer, #header {
     background: url(../img/footer.jpg) repeat;
 }
 
 
-
+p {
+    overflow: hidden;
+}
 
 
 
@@ -316,23 +321,23 @@ footer, #header {
     padding: 0;
     margin: 0 0.8em 0 0;
     .column(4);
+    vertical-align: top;
 }
 
 #image li {
     display: block;
     width: 100%;
     height: 100%;
-    margin-bottom: 0.3em;
+    margin: 1.5em 0;
 }
 
 #image li img {
     width: 90.5%;
-    height: 90.5%;
 }
 
 #infoSingle {
     .column(8);
-    margin-left: 21.8em; 
+    margin-left: 22.8em; 
 }
 
 #infoSingle h1 {
@@ -432,7 +437,7 @@ footer, #header {
 
 .commentaire {
     .column(5);
-    margin: 1.5em 0 0 -1.46em;
+    margin: 1.5em 0 0 0em;
     padding: 0 1.3em; 
     border: 1px solid #f0f0f0;
     moz-border-radius: 7px;
@@ -573,7 +578,7 @@ footer, #header {
 }
 
 #nom, #mail {
-    width: 25.7em;
+    width: 27.7em;
     display: inline-block;
 }
 
@@ -587,12 +592,14 @@ footer, #header {
 }
 
 #msg {
-    margin-left: 2.4em;
+    margin-left: 2.3em;
     vertical-align: top;
     margin-bottom: 1em;
     padding: 0.3em 0.5em 0 0.5em;
     font-family: 'Helvetica';
+    width: 29.4em;
 }
+
 
 .erreur {
     background: rgba(255,0,0,0.3);
@@ -604,20 +611,45 @@ footer, #header {
     text-align: center;
 }
 
-#envoyer {
-    background-color: rgba(0,255,0,0.5);
-    width: 600px;
-    text-align: center;
+#contact #envoyer {
     font-size: 1.2em;
-    padding: 0.2em 0;
     font-weight: bold;
-    margin-bottom: 0;
+    margin: 0 0 0 6.45em;
+    width: 28.35em; 
 }
 
-#envoyer {
-    width: 26.6em;
-    margin-left: 6.3em;
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+   #nom {
+        margin-left: 0.5em;
+    }
+
+    #mail {
+        margin-left: 3.7em;
+    }
+
+    #msg {
+        margin-left: 2.8em;
+        vertical-align: top;
+        margin-bottom: 1em;
+        padding: 0.3em 0.5em 0 0.5em;
+        font-family: 'Helvetica';
+        width: 35.85em;
+    }
+
+    #contact #envoyer {
+        margin: 0 0 0 6.2em;
+        width: 28.55em; 
+    }
+
+    #reseaux #mc_embed_signup {
+        margin-top: 1em;
+    }
+
 }
+
+
 
 #envoyer, #mc-embedded-subscribe, #commentform input[type=submit]{
 
@@ -683,7 +715,7 @@ footer, #header {
 }
 
 #mc_embed_signup {
-    margin-top: 3.3em;
+    margin-top: 3.5em;
 }
 
 #mc_embed_signup form {
@@ -724,44 +756,49 @@ footer, #header {
 }
 
 .type-blog {
-    width: 636px;
+    .column(8);
+    display: block;
     margin: 0 auto;
 }
 
 .type-blog h2 {
+    text-align: center;
+    padding: 0.25em 0;
+    margin-bottom: 0;
     background: #F0F0F0;
     border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     -weblit-border-radius: 5px 5px 0 0;
-    text-align: center;
-    padding: 0.25em 0;
-    margin-bottom: 0;
 }
 
 .type-blog #date {
     font-size: 0.8em;
     margin: 0;
+    text-align: center;
+    padding: 0.4em 0;    
     background: #F0F0F0;
     border-radius: 0 0 5px 5px;
     -moz-border-radius: 0 0 5px 5px;
     -weblit-border-radius: 0 0 5px 5px;
-    text-align: center;
-    padding: 0.4em 0;
 }
 
 .type-blog .post_content {
     padding: 0.5em 0;
     border-left: 2px solid #F0F0F0;
     border-right: 2px solid #F0F0F0;
+    background: rgba(240,240,240,.7);
 }
 
 .type-blog .post_content p {
     font-size: 1.1em;
     .column(7);
     display: block;
-    margin: 0 auto;
+    margin: 0.5em auto;
 }
 
+#commentform p {
+    overflow: visible;
+}
 
 
 #commentaire {
@@ -851,7 +888,7 @@ footer, #header {
     .column(4);
     position: absolute;
     top: 4.45em;
-    left: 42.8em;
+    left: 45.6em;
     line-height: 2;
 }
 
@@ -868,6 +905,12 @@ footer, #header {
 #propos section:nth-child(5) h3 {
     margin-bottom: 1.4em;
 }
+
+
+textarea {
+    resize: vertical;
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////  QUERI
 
@@ -1026,9 +1069,13 @@ footer, #header {
         margin: 4.5em 0.8em 0 0;
     }
 
-    #tvxHasard img, #image img {
+    #tvxHasard img {
         width: 400px;
         height: 199px;
+    }
+
+     #image img {
+        width: 400px;
     }
 
 
@@ -1183,7 +1230,6 @@ footer, #header {
 
     #image li img {
         width: 78%;
-        height: 78%;
         margin-left: 1.5em;
     }
 
@@ -1270,6 +1316,7 @@ footer, #header {
         margin-bottom: 1.4em;
     }
 
+
     #contact h2 {
         margin-left: 0.4em;
     }
@@ -1290,7 +1337,14 @@ footer, #header {
 
     #contact input[type=submit] {
         margin-left: 6.8em;
+        .column(3);
     }
+    
+    #contact #envoyer {
+        .column(3);
+        margin-left: 6.9em;
+    }
+
 
     #mc_embed_signup {
         margin: 0;
@@ -1312,6 +1366,9 @@ footer, #header {
     #reseaux {
         .column(3);
     }
+
+    
+    
 
 }
 
@@ -1450,6 +1507,11 @@ footer, #header {
         margin-left: 6.7em;
     }
 
+    #contact #envoyer {
+        .column(3);
+        margin-left: 6.9em;
+    }
+
     #reseaux {
         .column(3);
         margin-left: 11.3em;
@@ -1527,7 +1589,6 @@ footer, #header {
     
     #image img {
         width: 460px;
-        height: 240px;
         margin-left: 0.6em;
     }
 
@@ -1542,6 +1603,10 @@ footer, #header {
 
 
 @media only screen and(max-width: 479px ) {
+
+    body {
+        font-size: 13px;
+    }
     
     .content, #moi, #single, #contact, #post {
         width: 320px;
@@ -1629,7 +1694,13 @@ footer, #header {
     
     #contact input[type=submit] {
         margin-left: 1em;
+    }  
+
+    #contact #envoyer {
+        width: 280px;
+        margin-left: 1em;
     }
+
 
     #image ul {
         display: none;
@@ -1726,15 +1797,19 @@ footer, #header {
         margin: 1em 0.2em 1em 0.35em;
     }
 
-    #commentaire .commentaire  {
+    .commentaire  {
         width: 300px;
-        margin-left: 0em;
+        margin-left: -0.4em;
         padding: 0 0.3em;
     }
 
     .commentaire p:first-child {
         margin: 0 -0.35em;
         padding: 0 0.66em;
+    }
+
+    .commentaire p {        
+        padding: 0 0.3em;
     }
 
 }

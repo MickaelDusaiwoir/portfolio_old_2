@@ -106,12 +106,12 @@ if (!function_exists('juiz_manage_default_fields')) {
     function juiz_manage_default_fields($default) {
         $default['fields']['author'] = '<p class="comment-form-author">
             <label for="author">Nom</label>
-            <input id="author" type="text" aria-required="true" size="30" placeholder="Introduisez votre nom" name="author">
+            <input id="author" type="text" aria-required="true" size="30" placeholder="Mickael Dusaiwoir" name="author">
         </p>';
         $default['fields']['email'] = '
             <p class="comment-form-email">
                 <label for="email">Email</label>
-                <input id="email" name="email" value="' . $commenter['comment_author_email'] . '" placeholder="Votre email" aria-required="true" size="30" type="text" />
+                <input id="email" name="email" value="' . $commenter['comment_author_email'] . '" placeholder="Ex : xyz@exemple.com " aria-required="true" size="30" type="text" />
           </p>';
         $default['fields']['url'] = '';
         return $default;

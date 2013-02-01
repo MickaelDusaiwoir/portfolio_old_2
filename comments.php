@@ -28,7 +28,7 @@ if (have_comments()) {
                     ?>
                 </em>
                 <?php
-                _e(' a commenter le ');
+                _e(' a commenté le ');
                 comment_date('j F Y');
                 ?>
             </p>

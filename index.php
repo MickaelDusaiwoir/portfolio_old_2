@@ -91,7 +91,7 @@ get_header();
             ?>
         </div>
     </div>
-    <div id="travaux">
+    <section id="travaux">
         <h2>Mes travaux</h2>
         <?php
         $arg = array('post_type' => 'works', 'posts_per_page' => 3);
@@ -114,8 +114,8 @@ get_header();
             endif;
             ?>
         </ul>
-    </div>
-    <div id="dernierPost">
+    </section>
+    <section id="dernierPost">
         <h2>
             <?php _e('Les derniers posts'); ?>
         </h2>
@@ -132,17 +132,15 @@ get_header();
                     <article>
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         <?php the_content($more_link_text, $stripteaser); ?>
-                        <div>
-                            <p><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>  
-                            <p><?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires', 'comments-link', 'Les commentaires sont fermés'); ?></p>
-                        </div>
+                        <p><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>  
+                        <?php comments_popup_link('Aucun commentaire', '1 commentaire', '% commentaires', 'comments-link', 'Les commentaires sont fermés'); ?>
                     </article>
                     <?php
                 endwhile;
             endif;
             ?>
         </div>
-    </div>
+    </section>
 </div>
 <footer>
     <div id="contact">
@@ -158,7 +156,7 @@ get_header();
                 <label for="Nom"> 
                     Nom Prénom 
                 </label>
-                <input type="text" id="nom" placeholder="Introduisez votre nom et prénom" name="nom" <?php
+                <input type="text" id="nom" placeholder="Ex : Mickael Dusaiwoir" name="nom" <?php
         if (isset($nom)) {
             echo('value="' . $nom . '"');
         }
@@ -169,7 +167,7 @@ get_header();
                 <label for="mail">
                     Email
                 </label>
-                <input type="email" id="mail" placeholder="Introduisez votre email" name="mail" <?php
+                <input type="email" id="mail" placeholder="Ex : xyz@exemple.com" name="mail" <?php
                 if (isset($mail)) {
                     echo 'value="' . $mail . '"';
                 }
@@ -210,7 +208,7 @@ get_header();
 
                     <div class="mc-field-group">
                         <label for="mce-EMAIL">Email</label>
-                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Indiquez votre adresse mail">
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Ex : xyz@exemple.com">
                     </div>
                     <input type="submit" value="S'abonner" name="subscribe" id="mc-embedded-subscribe" class="button">
                 </form>

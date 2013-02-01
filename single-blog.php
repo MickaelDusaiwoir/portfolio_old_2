@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-<section id="content">
+<div id="content">
     <?php
     if (have_posts()):
         while (have_posts()):
@@ -18,7 +18,7 @@ get_header();
         endwhile;
     endif;
     ?>
-</section>
+</div>
 <section id="commentaire">
     <?php comments_template(); ?>
     <?php get_comments(); ?> 

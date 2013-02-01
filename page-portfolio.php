@@ -2,7 +2,7 @@
 get_header();
 ?>
 <div class="content">
-    <div id="gallery">
+    <section id="gallery">
         <h2 id="portfolio">
             <?php _e('Retrouvrez ici mes designs et conceptions') ?>
         </h2> 
@@ -27,7 +27,7 @@ get_header();
             endif;
             ?>
         </ul>
-    </div>
+    </section>
 </div>
 <?php
 get_footer();

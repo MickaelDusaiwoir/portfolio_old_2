@@ -2,7 +2,7 @@
 get_header();
 ?>
 <div class="content">
-    <div id="propos">
+    <section id="propos">
         <h2>
             <?php _e('Ce que vous souhaitez savoir sur moi se trouve sur cette page.'); ?>
         </h2>
@@ -25,7 +25,7 @@ get_header();
             endwhile;
         endif;
         ?>
-    </div>
+    </section>
 </div>
 <?php
 get_footer();

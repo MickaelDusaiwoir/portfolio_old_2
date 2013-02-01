@@ -27,7 +27,6 @@ get_header();
                     <div id="infoSingle">
                         <h1><?php the_title(); ?></h1>
                         <p id="date"><?php _e('Publié le'); ?> <?php echo get_the_date(); ?></p>
-                        <?php the_excerpt(); ?>
                         <?php the_content(); ?>
                     </div>
 
